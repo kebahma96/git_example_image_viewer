@@ -7,7 +7,7 @@ BitmapImage::BitmapImage() : width(640), height(480), channels(3), depth(8) {
 bool BitmapImage::load(std::string name) {
     // check it is a supported image file
     std::string fileExt = name.substr(name.find_last_of(".") + 1);
-    if ((fileExt == "jpg") or (fileExt == "png") or (fileExt == "bmp")){
+    if ((fileExt == "jpg") or (fileExt == "png") or (fileExt == "bmp") or (fileExt == "jpeg")){
         // load image file
         // decompress into buffer
         return true;
@@ -22,7 +22,9 @@ bool BitmapImage::save(std::string name) {
 }
 
 bool BitmapImage::resize(std::string name) {
-
+    if(width <= 0 or height <= 0){
+        return false;
+    }
     this->width=width;
     this->height=height;
     //resize buffer
