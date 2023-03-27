@@ -12,6 +12,8 @@ public:
 
     bool load(std::string name);
 
+    bool save(std::string name);
+
 private:
     int width, height;
     char channels;
