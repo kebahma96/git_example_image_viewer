@@ -17,6 +17,16 @@ bool BitmapImage::load(std::string name) {
 bool BitmapImage::save(std::string name) {
 
     return true;
+
+
+}
+
+bool BitmapImage::resize(std::string name) {
+
+    this->width=width;
+    this->height=height;
+    //resize buffer
+    return true;
 }
 
 
