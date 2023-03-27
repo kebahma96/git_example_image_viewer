@@ -3,6 +3,7 @@
 
 #include <string>
 
+
 class BitmapImage {
 public:
     BitmapImage();
