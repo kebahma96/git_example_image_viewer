@@ -4,7 +4,7 @@
 
 int main() {
 
-    std::cout << "Image viewer" << version << std::endl;
+    std::cout << "Image viewer - " << version << std::endl;
     BitmapImage b;
     std::string imgName = "test.png";
     if (b.load(imgName))
